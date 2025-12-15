@@ -11,6 +11,7 @@
 - **用量统计（usage）补全**：当流式响应没有返回用量时，通过 `GET /responses/{id}` 轮询补齐用量。
 - **兼容 OpenWebUI 用量面板**：在流式输出末尾额外发送 ChatCompletions 风格的 `usage` chunk，便于 OpenWebUI 展示 Token 消耗。
 - **会话续写（previous_response_id）**：开启 `store` 后复用 `previous_response_id`，减少重复上下文与费用；当 system 或 tools 发生变化会自动重置会话，避免 400。
+- 支持火山方舟的Token缓存（需要在火山方舟网页手动开启）。
 - **仅测试了OenAPI的工具，MCP/流式HTTP目前不可用。**
 
 ## 运行环境
