@@ -3,7 +3,7 @@ title: 火山方舟 Responses API Pipeline (Fix Tool Hang + Clear Status + Usage
 id: volcengine_ark_responses_cache_tools_usage_fixed
 required_open_webui_version: 0.4.0
 description: Fixes tool-call stuck status, adds tool timeout, retrieves usage via GET /responses/{id} (no stream_options), emits ChatCompletions SSE usage chunk for OpenWebUI.
-version: 2.3.0
+version: 1.0.0
 license: MIT
 requirements: httpx>=0.24.0
 """
