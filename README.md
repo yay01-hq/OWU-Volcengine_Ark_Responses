@@ -11,6 +11,7 @@
 - **用量统计（usage）补全**：当流式响应没有返回用量时，通过 `GET /responses/{id}` 轮询补齐用量。
 - **兼容 OpenWebUI 用量面板**：在流式输出末尾额外发送 ChatCompletions 风格的 `usage` chunk，便于 OpenWebUI 展示 Token 消耗。
 - **会话续写（previous_response_id）**：开启 `store` 后复用 `previous_response_id`，减少重复上下文与费用；当 system 或 tools 发生变化会自动重置会话，避免 400。
+- **仅测试了OenAPI的工具，MCP/流式HTTP目前不可用。**
 
 ## 运行环境
 
@@ -22,6 +23,7 @@
 1. 在 OpenWebUI 进入 **Functions**（函数）页面。
 2. 选择 **Import**（导入），导入本仓库提供的函数导出文件（`.json`），或新建 pipe 并粘贴 `content` 中的代码。
 3. 启用该函数，并在模型配置中选择此 pipe 作为后端管线。
+4. 需要在模型-高级参数-函数调用中开启“原生”。
 
 > 不同版本的 OpenWebUI 菜单位置略有差异，但核心思路一致：**导入/创建 pipe → 启用 → 在模型里选用该 pipe**。
 
